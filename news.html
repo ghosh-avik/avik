@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="./images/icon.png">
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--- <title>News</title> --->
+<title>jemdoc + new design</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<div id="main-container">
+<div id="header-container">
+<div id="header">
+<div id="header-icon-text-container">
+<div id="header-icon-container" >
+</div>
+<div id="header-text-container">
+Hello World! :)
+</div>
+</div>
+<div id="main">
+<button class="openbtn" onclick="openNav()">☰</button>
+</div>
+</div>
+</div>
+<div id="layout">
+<div id="layout-menu-container">
+<div id="layout-menu">
+<div class="menu-item"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></div>
+<div class="menu-category">Avik Ghosh</div>
+<div class="menu-item"><a href="profile.html">Profile</a></div>
+<div class="menu-item"><a href="research_statement.html">Research&nbsp;statement</a></div>
+<div class="menu-item"><a href="news.html" class="current">Recent&nbsp;news</a></div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-item"><a href="https://drive.google.com/file/d/1jX9Tn29uvXkb5KfjhqPTWkJuoNISXDKS/view?usp=drive_link" target="blank">CV</a></div>
+</div> <!-- <div id="layout-menu"> -->
+</div> <!-- <div id="layout-menu-container"> -->
+<div id="layout-content-container">
+<div id="layout-content">
+<div id="toptitle">
+<h1>News</h1>
+</div>
+<ul>
+<li><p>December 2025:  Our paper on <a href="https://arxiv.org/abs/2506.22406" target=&ldquo;blank&rdquo;>Baseline-improved Economic Model Predictive 
+Control for Optimal Microgrid Dispatch</a> is submitted to Automatica.</p>
+</li>
+<li><p>August 2025: I started as a postdoc in UCSD ECE.</p>
+</li>
+<li><p>July 2025: I won the <b>third prize</b> in the Graduate Student Poster contest in IEEE PESGM 2025 for my work on EMPC
+for optimal microgrid dispatch. Check out the poster <a href="https://drive.google.com/file/d/1HEugnV7bV1CGsiYK0Q5h4aq1bXeBhHrH/view?usp=drive_link" target=&ldquo;blank&rdquo;>here</a>.</p>
+</li>
+<li><p>June 2025: I defended my PhD dissertation. My dissertation can be found <a href="https://escholarship.org/uc/item/1wb0r0pz" target=&ldquo;blank&rdquo;>here</a>.</p>
+</li>
+<li><p>April 2025: I presented my work on EMPC for optimal microgrid dispatch at the 45th Southern California Control workshop at UC San Diego.</p>
+</li>
+<li><p>February 2025: Our paper on <a href="https://ieeexplore.ieee.org/document/10928997" target=&ldquo;blank&rdquo;>Adaptive Relaxation based Non-Conservative Chance Constrained Stochastic MPC</a> has been accepted in IEEE Transactions on Control Systems Technology. [<a href="https://arxiv.org/pdf/2406.01973" target=&ldquo;blank&rdquo;>arXiv</a>]</p>
+</li>
+</ul>
+</div> <!-- <div id="layout-content"> -->
+<div id="footer-container">
+<div id="footer">
+<div id="footer-text">
+Last edited  on January 4<sup>th</sup> 2026  05:09PM (Time Zone: PST). </br>
+Powered by <a href="https://github.com/szl2/jemdoc-new-design" target="blank">jemdoc + new design</a>.
+</div> <!-- <div id="footer-text"> -->
+</div> <!-- <div id="footer"> -->
+</div> <!-- <div id="footer-container"> -->
+</div> <!-- <div id="layout-content-container"> -->
+</div> <!--- <div id="layout"> --->
+</div> <!--- <div id="main-container"> --->
+<script>
+function openNav() {
+    if (window.innerWidth <= 1200) {
+        document.getElementById("layout-menu").style.width = "280px";
+        document.getElementById("layout-content-container").style.marginLeft = "280.8px";
+        document.getElementById("layout-content-container").style.position = "fixed";
+    }
+}
+function closeNav() {
+    if (window.innerWidth <= 1200) {
+        document.getElementById("layout-menu").style.width = "0";
+        document.getElementById("layout-content-container").style.position = "static";
+        document.getElementById("layout-content-container").style.marginLeft = "0px";
+        setInterval(
+            function(){ location.reload() },
+            500
+        );
+    }
+}
+</script>
+</body>
+</html>
