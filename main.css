@@ -996,6 +996,34 @@ ol li::marker { color: var(--faint); font-variant-numeric: tabular-nums; }
 
 .award { color: var(--gold); font-weight: 600; }
 
+/* --- highlighted callout -------------------------------------------------- */
+
+/* Time-sensitive notice (e.g. job market status). Deliberately louder than
+   body prose: accent wash, accent rule, and its own icon. */
+.callout {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  margin: 1.4rem 0;
+  padding: 0.85rem 1rem;
+  max-width: 68ch;
+  background: var(--accent-wash);
+  border: 1px solid var(--accent);
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--text-strong);
+}
+
+.callout .fa {
+  flex: 0 0 auto;
+  margin-top: 0.18rem;
+  color: var(--accent);
+}
+
+.callout b { color: var(--accent); }
+
 /* --- student comment quotes ----------------------------------------------- */
 
 /* Three across, so the quotes read as a wall of short excerpts rather than a
