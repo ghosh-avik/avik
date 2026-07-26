@@ -1172,6 +1172,44 @@ ol li::marker { color: var(--faint); font-variant-numeric: tabular-nums; }
 /* A standalone centred figure (e.g. the word cloud). */
 .figure { margin: 2rem auto; text-align: center; }
 
+/* Research-statement figures. Captions are baked into the images, which have
+   white backgrounds, so each image gets a card treatment against the tinted
+   page. Solo figures stay at a readable width; grids go two-up and collapse
+   to one column on phones. */
+.rs-fig,
+.rs-fig-grid { margin: 1.6rem 0 2rem; }
+
+.rs-fig { max-width: 720px; }
+
+.rs-fig img,
+.rs-fig-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.rs-fig-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  /* Cards in a row match heights; a shorter image letterboxes invisibly
+     against its own white background. */
+  align-items: stretch;
+}
+
+.rs-fig-grid img {
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .rs-fig-grid { grid-template-columns: 1fr; }
+}
+
 .figure img {
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
