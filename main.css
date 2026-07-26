@@ -1210,6 +1210,62 @@ th {
 /* Wide tables get their own scroll container instead of breaking the page. */
 .table-scroll { overflow-x: auto; }
 
+/* A five-column table cannot fit a phone: the last columns end up off-screen
+   behind a sideways scroll nobody notices. Below 700px each row becomes its
+   own card, with the header text moved into per-cell labels via data-label. */
+@media (max-width: 700px) {
+  .stack-table thead { display: none; }
+
+  .stack-table,
+  .stack-table tbody,
+  .stack-table tr,
+  .stack-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .stack-table { margin: 1.25rem 0; }
+
+  .stack-table tr {
+    margin-bottom: 0.8rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  .stack-table td {
+    padding: 0.25rem 0;
+    border-bottom: 0;
+  }
+
+  /* First cell is the row's title. */
+  .stack-table td:first-child {
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--text-strong);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Remaining cells read as label / value pairs. */
+  .stack-table td:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .stack-table td:not(:first-child)::before {
+    content: attr(data-label);
+    flex: 0 0 auto;
+    color: var(--muted);
+    font-size: 0.86em;
+  }
+
+  .stack-table td:not(:first-child) > * { text-align: right; }
+}
+
 /* A whole cell can be one link (e.g. a rating that opens its report). Without
    this the global bold colour wins over the link colour, so half the label
    looks like a link and half does not. */
