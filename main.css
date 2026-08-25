@@ -530,8 +530,7 @@ ol li::marker { color: var(--faint); font-variant-numeric: tabular-nums; }
   grid-template-columns: 270px 1fr;
   gap: 2.75rem;
   align-items: start;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.75rem;
 }
 
 .hero-photo {
